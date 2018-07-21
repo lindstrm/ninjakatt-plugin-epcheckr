@@ -1,0 +1,8 @@
+{
+  "apiUrl": "http://epcheckr.com/api",
+  "apiKey": "",
+  "shows": {
+    "categories": ["1", "3", "2", "4"],
+    "updateInterval": 60
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "ninjakatt-plugin-epcheckr",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lindstrm/ninjakatt-plugin-epcheckr.git"
+  },
+  "homepage": "https://github.com/lindstrm/ninjakatt-plugin-epcheckr",
+  "bugs": {
+    "url": "https://github.com/lindstrm/ninjakatt-plugin-epcheckr/issues"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "ninjakatt-plugin-base": "^1.0.1"
+  }
+}
