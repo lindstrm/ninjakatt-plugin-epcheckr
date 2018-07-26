@@ -15,7 +15,8 @@ module.exports = class Epcheckr extends Base {
       emitter.emit(
         'message',
         `Started epcheckr shows timer (${this.settings.shows.updateInterval}m)`,
-        'start'
+        'start',
+        Epcheckr.name
       );
       this.showsTimer();
     }
@@ -40,7 +41,12 @@ module.exports = class Epcheckr extends Base {
         response.data.map(entry => entry.name.replace(/\./g, ' '))
       )
       .catch(error => {
-        emitter.emit('message', 'Error getting shows from epchecker', 'error');
+        emitter.emit(
+          'message',
+          'Error getting shows from epchecker',
+          'error',
+          Epcheckr.name
+        );
       });
 
     emitter.emit('torrentrss.add-show', shows);
@@ -59,7 +65,8 @@ module.exports = class Epcheckr extends Base {
       `Scrobbled ${details.item.showtitle} s${zeroBefore(
         details.item.season
       )}e${zeroBefore(details.item.episode)} to epcheckr.`,
-      'add'
+      'add',
+      Epcheckr.name
     );
 
     return response;
