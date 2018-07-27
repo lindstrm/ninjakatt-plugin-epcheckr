@@ -57,14 +57,14 @@ module.exports = class Epcheckr extends Base {
     const settings = this.settings;
     const path = `${settings.apiUrl}/user/mark/${details.tvdbid}/${
       details.item.season
-    }/${details.item.episode}`;
+    }/${details.item.episode}?apikey=${settings.apiKey}`;
     const response = await axios.get(path).then(res => res.data);
 
     emitter.emit(
       'message',
       `Scrobbled ${details.item.showtitle} s${zeroBefore(
         details.item.season
-      )}e${zeroBefore(details.item.episode)} to epcheckr.`,
+      )}e${zeroBefore(details.item.episode)}.`,
       'add',
       Epcheckr.name
     );
