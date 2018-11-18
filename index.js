@@ -49,7 +49,10 @@ module.exports = class Epcheckr extends Base {
         );
       });
 
-    emitter.emit('torrentrss.add-show', shows);
+    if (shows) {
+      emitter.emit('torrentrss.add-show', shows);
+    }
+
     this.showsTimer();
   }
 
