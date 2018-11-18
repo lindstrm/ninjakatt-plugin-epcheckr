@@ -1,6 +1,6 @@
 {
   "name": "ninjakatt-plugin-epcheckr",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -17,7 +17,6 @@
   },
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.18.0",
-    "ninjakatt-plugin-base": "^1.0.3"
+    "axios": "^0.18.0"
   }
 }

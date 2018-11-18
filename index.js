@@ -1,15 +1,15 @@
-const Base = require('ninjakatt-plugin-base');
 const axios = require('axios');
 const { zeroBefore } = require(`${global.appRoot}/lib/helpers`);
 const emitter = global.emitter;
 
-module.exports = class Epcheckr extends Base {
+module.exports = class Epcheckr {
   constructor() {
-    super(__dirname);
-    this.setupListeners();
+    this.construct(__dirname);
   }
 
   setup() {
+    this.setupListeners();
+
     if (this.settings.shows.categories.length) {
       this.getFollowedShows();
       emitter.emit(
