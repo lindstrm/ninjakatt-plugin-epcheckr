@@ -50,7 +50,7 @@ module.exports = class Epcheckr {
       });
 
     if (shows) {
-      emitter.emit('torrentrss.add-show', shows);
+      emitter.emit('torrentrss.add-show', shows, Epcheckr.name);
     }
 
     this.showsTimer();
